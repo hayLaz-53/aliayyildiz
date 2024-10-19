@@ -37,11 +37,13 @@
             <button type="submit" class="button">Gönder</button>
         </div>
     </form>
-    <div id="results" style="display:none;">
-        <h3>Sonuçlar:</h3>
-        <p id="result1"></p>
-        <p id="result2"></p>
-        <p id="result3"></p>
+
+    <!-- Pop-up alanı -->
+    <div id="popup" style="display:none;">
+        <div class="popup-content">
+            <span id="closePopup" style="cursor:pointer;">&times;</span>
+            <h3>Cevaplarınız için teşekkürler!</h3>
+        </div>
     </div>
 </main>
 
@@ -60,18 +62,43 @@ document.addEventListener("DOMContentLoaded", function() {
         const question2 = document.getElementById("question2").value;
         const question3 = document.getElementById("question3").value;
 
-        // Sonuçları göster
-        document.getElementById("result1").textContent = "1. Blogumu nasıl buldunuz: " + question1;
-        document.getElementById("result2").textContent = "2. Gelecekte önem kazanacak alanlar: " + question2;
-        document.getElementById("result3").textContent = "3. Kendinizi nasıl motive edersiniz: " + question3;
+        // Burada verileri işleyebilirsiniz (örneğin, sunucuya gönderme)
 
-        // Sonuçları göster
-        document.getElementById("results").style.display = "block";
+        // Pop-up'ı göster
+        document.getElementById("popup").style.display = "block";
 
         // Formu temizle
         document.getElementById("surveyForm").reset();
     });
+
+    // Pop-up'ı kapatma
+    document.getElementById("closePopup").addEventListener("click", function() {
+        document.getElementById("popup").style.display = "none";
+    });
 });
 </script>
+
+<style>
+/* Pop-up stili */
+#popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+</style>
 </body>
 </html>
