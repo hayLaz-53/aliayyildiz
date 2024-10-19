@@ -62,13 +62,36 @@ document.addEventListener("DOMContentLoaded", function() {
         const question2 = document.getElementById("question2").value;
         const question3 = document.getElementById("question3").value;
 
-        // Burada verileri işleyebilirsiniz (örneğin, sunucuya gönderme)
+        // Verileri sunucuya gönder
+        const data = {
+            question1: question1,
+            question2: question2,
+            question3: question3
+        };
 
-        // Pop-up'ı göster
-        document.getElementById("popup").style.display = "block";
+        fetch('https://your-server-endpoint.com/api/survey', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Pop-up'ı göster
+            document.getElementById("popup").style.display = "block";
 
-        // Formu temizle
-        document.getElementById("surveyForm").reset();
+            // Formu temizle
+            document.getElementById("surveyForm").reset();
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
     });
 
     // Pop-up'ı kapatma
