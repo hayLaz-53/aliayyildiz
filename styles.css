@@ -1,8 +1,9 @@
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #ff6a88, #ffcc00);
+    background: linear-gradient(135deg, #4a90e2, #50e3c2);
     color: #333;
     line-height: 1.6;
 }
@@ -22,13 +23,13 @@ header:hover {
 
 nav a {
     margin: 0 15px;
-    color: #ff6a88;
+    color: #4a90e2;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
 nav a:hover {
-    color: #ffcc00;
+    color: #50e3c2;
     transform: scale(1.1);
 }
 
@@ -63,7 +64,7 @@ ul li {
 
 a {
     display: inline-block;
-    background-color: #ff6a88;
+    background-color: #4a90e2;
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
@@ -72,12 +73,12 @@ a {
 }
 
 a:hover {
-    background-color: #ffcc00;
+    background-color: #50e3c2;
     transform: translateY(-3px);
 }
 
 button {
-    background-color: #ff6a88;
+    background-color: #4a90e2;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -88,7 +89,7 @@ button {
 }
 
 button:hover {
-    background-color: #ffcc00;
+    background-color: #50e3c2;
     transform: scale(1.05);
 }
 
@@ -124,7 +125,7 @@ button:hover {
 }
 
 .survey h2 {
-    color: #ff6a88;
+    color: #4a90e2;
     margin-bottom: 15px;
 }
 
@@ -140,7 +141,7 @@ button:hover {
 }
 
 .survey button[type="submit"] {
-    background-color: #ff6a88;
+    background-color: #4a90e2;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -151,6 +152,6 @@ button:hover {
 }
 
 .survey button[type="submit"]:hover {
-    background-color: #ffcc00;
+    background-color: #50e3c2;
     transform: scale(1.05);
 }
