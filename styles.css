@@ -2,8 +2,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #121212; /* Koyu arka plan */
+    color: #ffffff; /* Yazı rengi */
 }
 
 header {
@@ -25,45 +25,46 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-.profile-img {
-    width: 150px;
-    border-radius: 75px;
-    margin-top: 15px;
-    transition: transform 0.3s;
-}
-
-.profile-img:hover {
-    transform: scale(1.1);
-}
-
 main {
     padding: 20px;
+}
+
+.survey {
+    background-color: #1c1c1c; /* Anket arka planı */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.question label {
+    display: block;
+    margin: 5px 0;
+}
+
+button {
+    background-color: #ff0000; /* Kırmızı */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #cc0000; /* Daha koyu kırmızı */
 }
 
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #ff0000;
+    background-color: #ff0000; /* Kırmızı */
     color: #ffffff;
     position: relative;
     bottom: 0;
     width: 100%;
 }
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 10px 0;
-}
-
-a.button {
-    display: inline-block;
-    background-color: #ff0000; /* Kırmızı */
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition
