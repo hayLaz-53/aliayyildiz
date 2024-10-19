@@ -4,24 +4,32 @@ body {
     padding: 0;
     background-color: #f0f8ff;
     color: #333;
+    line-height: 1.6;
 }
 
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
     margin: 0 15px;
     color: white;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
 }
 
 .profile-img {
     width: 150px;
     border-radius: 75px;
+    margin-top: 15px;
 }
 
 main {
@@ -30,9 +38,47 @@ main {
 
 footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     background-color: #4CAF50;
     color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ffcc00;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
 }
 
 .popup {
@@ -50,4 +96,46 @@ footer {
 
 .popup h2 {
     margin: 0 0 20px;
+}
+
+/* Anket kısmı için stil */
+form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+form:hover {
+    transform: scale(1.02);
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border: 1px solid #4CAF50;
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    margin-top: 10px;
 }
