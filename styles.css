@@ -2,9 +2,19 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #283048, #859398);
+    background: linear-gradient(135deg, #ff7f50, #ffcc00);
     color: #333;
     line-height: 1.6;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 header {
@@ -13,11 +23,20 @@ header {
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
 }
 
-header:hover {
-    background-color: rgba(255, 255, 255, 1);
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    transition: transform 0.3s;
+}
+
+header h1:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    margin: 20px 0;
 }
 
 nav a {
@@ -28,7 +47,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff7f50; /* Coral color for hover */
+    color: #ffcc00; /* Golden yellow */
     transform: scale(1.1);
 }
 
@@ -74,17 +93,11 @@ a.button {
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s, transform 0.3s;
-    position: relative;
-    overflow: hidden;
 }
 
 a.button:hover {
     background-color: #ff4f00; /* Darker Coral */
     transform: translateY(-3px);
-}
-
-a.button i {
-    margin-right: 8px; /* Space between icon and text */
 }
 
 button {
@@ -114,13 +127,13 @@ button:hover {
     color: white;
     text-align: center;
     padding: 50px;
+    animation: fadeIn 0.5s ease-in;
 }
 
 .popup h2 {
     margin: 0 0 20px;
 }
 
-/* Anket kısmı için stil */
 .survey {
     background-color: #ffffff;
     border-radius: 8px;
@@ -166,10 +179,10 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Media Queries for responsive design */
 @media (max-width: 600px) {
     nav a {
         display: block; /* Stack links on small screens */
         margin: 10px 0;
     }
 }
+
