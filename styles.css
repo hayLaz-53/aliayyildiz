@@ -1,9 +1,8 @@
-
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #4a90e2, #50e3c2);
+    background: linear-gradient(135deg, #283048, #859398);
     color: #333;
     line-height: 1.6;
 }
@@ -23,13 +22,13 @@ header:hover {
 
 nav a {
     margin: 0 15px;
-    color: #4a90e2;
+    color: #283048;
     text-decoration: none;
     transition: color 0.3s, transform 0.3s;
 }
 
 nav a:hover {
-    color: #50e3c2;
+    color: #ff7f50; /* Coral color for hover */
     transform: scale(1.1);
 }
 
@@ -37,6 +36,11 @@ nav a:hover {
     width: 150px;
     border-radius: 75px;
     margin-top: 15px;
+    transition: transform 0.3s;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
 }
 
 main {
@@ -62,23 +66,29 @@ ul li {
     margin: 10px 0;
 }
 
-a {
+a.button {
     display: inline-block;
-    background-color: #4a90e2;
+    background-color: #ff7f50; /* Coral */
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
-a:hover {
-    background-color: #50e3c2;
+a.button:hover {
+    background-color: #ff4f00; /* Darker Coral */
     transform: translateY(-3px);
 }
 
+a.button i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
 button {
-    background-color: #4a90e2;
+    background-color: #ff7f50;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -89,7 +99,7 @@ button {
 }
 
 button:hover {
-    background-color: #50e3c2;
+    background-color: #ff4f00;
     transform: scale(1.05);
 }
 
@@ -125,7 +135,7 @@ button:hover {
 }
 
 .survey h2 {
-    color: #4a90e2;
+    color: #283048;
     margin-bottom: 15px;
 }
 
@@ -141,7 +151,7 @@ button:hover {
 }
 
 .survey button[type="submit"] {
-    background-color: #4a90e2;
+    background-color: #ff7f50;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -152,6 +162,14 @@ button:hover {
 }
 
 .survey button[type="submit"]:hover {
-    background-color: #50e3c2;
+    background-color: #ff4f00;
     transform: scale(1.05);
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 600px) {
+    nav a {
+        display: block; /* Stack links on small screens */
+        margin: 10px 0;
+    }
 }
