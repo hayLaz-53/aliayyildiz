@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("popup").style.display = "flex"; // Pop-up'ı göster
+    // Pop-up'ı göster
+    document.getElementById("popup").style.display = "flex"; 
 });
 
 function closePopup() {
-    document.getElementById("popup").style.display = "none"; // Pop-up'ı kapat
+    // Pop-up'ı kapat
+    document.getElementById("popup").style.display = "none"; 
 }
+
