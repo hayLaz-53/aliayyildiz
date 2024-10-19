@@ -5,6 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Anket - Ali Ayyıldız</title>
+    <style>
+        #popup {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 300px;
+            animation: fadeIn 0.3s;
+        }
+
+        .popup-content h3 {
+            margin: 0;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            font-size: 1.5em;
+        }
+
+        #closePopup {
+            font-size: 1.5em;
+            color: #777;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        #closePopup:hover {
+            color: #333;
+        }
+
+        /* Fade in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 <body>
 
@@ -38,10 +87,9 @@
         </div>
     </form>
 
-    <!-- Pop-up alanı -->
     <div id="popup" style="display:none;">
         <div class="popup-content">
-            <span id="closePopup" style="cursor:pointer;">&times;</span>
+            <span id="closePopup">&times;</span>
             <h3>Cevaplarınız için teşekkürler!</h3>
         </div>
     </div>
@@ -54,74 +102,18 @@
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("surveyForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Formun varsayılan gönderimini engelle
+        event.preventDefault();
 
-        // Cevapları al
         const question1 = document.getElementById("question1").value;
         const question2 = document.getElementById("question2").value;
         const question3 = document.getElementById("question3").value;
 
-        // Verileri sunucuya gönder
         const data = {
             question1: question1,
             question2: question2,
             question3: question3
         };
 
-        fetch('https://your-server-endpoint.com/api/survey', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Pop-up'ı göster
-            document.getElementById("popup").style.display = "block";
+        fetch('https://your
 
-            // Formu temizle
-            document.getElementById("surveyForm").reset();
-        })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-        });
-    });
-
-    // Pop-up'ı kapatma
-    document.getElementById("closePopup").addEventListener("click", function() {
-        document.getElementById("popup").style.display = "none";
-    });
-});
-</script>
-
-<style>
-/* Pop-up stili */
-#popup {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.popup-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-}
-</style>
-</body>
-</html>
 
