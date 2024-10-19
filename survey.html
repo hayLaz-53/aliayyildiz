@@ -3,38 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anket - Ali's Blog </title>
     <link rel="stylesheet" href="styles.css">
+    <title>Anket - Ali Ayyıldız</title>
 </head>
 <body>
-    <header>
-        <h1>Ali Ayyıldız </h1>
-        <nav>
-            <a href="index.html">Anasayfa</a>
-            <a href="projects.html">Projeler</a>
-            <a href="contact.html">İletişim</a>
-            <a href="survey.html">Anket</a>
-        </nav>
-    </header>
-    
-    <main>
-        <section>
-            <h2>Anket</h2>
-            <form>
-                <label>1. Bana tavsiyeleriniz nelerdir?</label>
-                <input type="text" required>
-                
-                <label>2. Kendimi hangi alanlarda geliştirebilirim?</label>
-                <input type="text" required>
-                
-                <label>3. Blogda görmek istediğiniz diğer içerikler neler?</label>
-                <input type="text" required>
-                
-                <button type="submit">Gönder</button>
-            </form>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; [2024] [Ali Ayyıldız]</p>
-    </footer>
+
+<header>
+    <h1>Kişisel Blog - Ali Ayyıldız</h1>
+    <nav>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="contact.html">İletişim</a>
+        <a href="projects.html">Projeler</a>
+        <a href="survey.html">Anket</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Anket</h2>
+    <div class="survey">
+        <div class="question">
+            <label for="question1">1. Favori programlama diliniz nedir?</label>
+            <input type="text" id="question1" placeholder="Cevabınızı buraya yazın">
+        </div>
+        <div class="question">
+            <label for="question2">2. Hangi projeleri daha çok tercih edersiniz?</label>
+            <input type="text" id="question2" placeholder="Cevabınızı buraya yazın">
+        </div>
+        <div class="question">
+            <label for="question3">3. Hangi konularla ilgileniyorsunuz?</label>
+            <input type="text" id="question3" placeholder="Cevabınızı buraya yazın">
+        </div>
+        <button type="submit" class="button">Gönder</button>
+    </div>
+</main>
+
+<footer>
+    <p>© 2024 Kişisel Blog. Tüm hakları saklıdır.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
