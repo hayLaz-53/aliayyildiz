@@ -105,39 +105,9 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("surveyForm").addEventListener("submit", function(event) {
         event.preventDefault(); // Formun varsayılan gönderimini engelle
 
-        // Cevapları al
-        const question1 = document.getElementById("question1").value;
-        const question2 = document.getElementById("question2").value;
-        const question3 = document.getElementById("question3").value;
-
-        // Verileri sunucuya gönder (örnek URL kullanın)
-        const data = {
-            question1: question1,
-            question2: question2,
-            question3: question3
-        };
-
-        fetch('https://your-server-endpoint.com/api/survey', { // Burayı kendi sunucu URL'inizle değiştirin
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Pop-up'ı göster
-            document.getElementById("popup").style.display = "flex"; // Pop-up'ı göster
-            document.getElementById("surveyForm").reset(); // Formu temizle
-        })
-        .catch(error => {
-            console.error('Bir hata oluştu:', error);
-        });
+        // Pop-up'ı göster
+        document.getElementById("popup").style.display = "flex"; // Pop-up'ı göster
+        document.getElementById("surveyForm").reset(); // Formu temizle
     });
 
     // Pop-up'ı kapatma
@@ -148,3 +118,4 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 </body>
 </html>
+
