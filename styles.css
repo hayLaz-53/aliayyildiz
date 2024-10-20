@@ -11,7 +11,6 @@ header {
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
-    position: relative; /* Üst kısmı konumlandırmak için */
 }
 
 nav {
@@ -32,7 +31,7 @@ nav a:hover {
 
 main {
     padding: 20px;
-    position: relative; /* Ana içeriği konumlandırmak için */
+    min-height: calc(100vh - 160px); /* Header ve footer yüksekliğini düşürmek için */
 }
 
 ul {
@@ -65,7 +64,6 @@ footer {
     background-color: #ff0000;
     color: #ffffff;
     position: relative;
-    bottom: 0;
     width: 100%;
 }
 
@@ -135,15 +133,12 @@ footer {
     color: red; /* Kırmızı */
 }
 
-/* Fotoğraf stili */
 img {
     width: 150px; /* Genişlik ayarı */
     height: auto; /* Yükseklik otomatik */
     border-radius: 10px; /* Köşeleri yuvarlak yapar */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Gölgelendirme efekti */
-    position: absolute; /* Konumlandırma için absolute */
-    top: 10px; /* Üstten 10px uzaklık */
-    right: 20px; /* Sağdan 20px uzaklık */
+    margin: 10px; /* Görsel için marjin ekleme */
     transition: transform 0.3s; /* Geçiş efekti */
 }
 
