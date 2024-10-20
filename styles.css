@@ -31,6 +31,7 @@ nav a:hover {
 
 main {
     padding: 20px;
+    position: relative; /* Ana içeriği konumlandırmak için */
 }
 
 ul {
@@ -131,4 +132,20 @@ footer {
 
 .close:hover {
     color: red; /* Kırmızı */
+}
+
+/* Yeni img stili */
+img {
+    width: 150px; /* Genişlik ayarı */
+    height: auto; /* Yükseklik otomatik */
+    border-radius: 10px; /* Köşeleri yuvarlak yapar */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Gölgelendirme efekti */
+    position: absolute; /* Konumlandırma için absolute */
+    top: 20px; /* Üstten 20px uzaklık */
+    right: 20px; /* Sağdan 20px uzaklık */
+    transition: transform 0.3s; /* Geçiş efekti */
+}
+
+img:hover {
+    transform: scale(1.05); /* Üzerine gelindiğinde büyütme efekti */
 }
