@@ -145,3 +145,30 @@ img {
 img:hover {
     transform: scale(1.05); /* Üzerine gelindiğinde büyütme efekti */
 }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    .button {
+        padding: 8px 12px;
+    }
+
+    img {
+        width: 100px; /* Mobilde daha küçük görüntü */
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .survey {
+        padding: 15px;
+    }
+}
