@@ -31,7 +31,7 @@ nav a:hover {
 
 main {
     padding: 20px;
-    min-height: calc(100vh - 160px); /* Header ve footer yüksekliğini düşürmek için */
+    min-height: calc(100vh - 160px);
 }
 
 ul {
@@ -130,23 +130,21 @@ footer {
 }
 
 .close:hover {
-    color: red; /* Kırmızı */
+    color: red; 
 }
 
 img {
-    width: 150px; /* Genişlik ayarı */
-    height: auto; /* Yükseklik otomatik */
-    border-radius: 10px; /* Köşeleri yuvarlak yapar */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Gölgelendirme efekti */
-    margin: 10px; /* Görsel için marjin ekleme */
-    transition: transform 0.3s; /* Geçiş efekti */
-}
+    width: 150px; 
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    margin: 10px;
+    transition: transform 0.3s; 
 
 img:hover {
-    transform: scale(1.05); /* Üzerine gelindiğinde büyütme efekti */
-}
+    transform: scale(1.05); 
 
-/* Media Queries for Responsive Design */
+
 @media (max-width: 768px) {
     header {
         padding: 10px 0;
@@ -161,7 +159,7 @@ img:hover {
     }
 
     img {
-        width: 100px; /* Mobilde daha küçük görüntü */
+        width: 100px; 
     }
 
     main {
